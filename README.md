@@ -103,10 +103,61 @@ Try putting in your favorite coin or `BTC` as a `Coin`, and then create a `Walle
 
 Once you have everything deployed properly and you have one or more addresess, you can test your API:
 
-```bash
-$ curl http://your-host.com:8325/api/1.0/addresses/youremail@example.com/BTC/
+**Request**
+
+```
+GET http://your-host.com:8325/api/1.0/addresses/youremail@example.com/BTC/
+```
+
+**Response**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json;encoding=utf-8
 
 {"address":"1jM9o3y7KL6DK2fvEwkCJmaNVvar85B3R"}
+```
+
+## Other functions
+
+Though not in the original specification, this API allows for the creation, update, and deletion of addresses, when a valid API key is present.
+
+### Create and Update Addresses:
+
+**Request**
+
+```
+POST http://your-host.com:8325/api/1.0/addresses/youremail@example.com/BTC/
+Content-Type: application/json;encoding=utf-8
+Authorization: Api-Key abc123
+
+{"address":"1jM9o3y7KL6DK2fvEwkCJmaNVvar85B3R"}
+```
+
+**Response**
+```
+HTTP/1.1 201 Created
+Content-Type: application/json;encoding=utf-8
+
+{"status":"success"}
+```
+
+### Delete an Address
+
+
+**Request**
+```
+DELETE http://your-host.com:8325/api/1.0/addresses/youremail@example.com/BTC/
+Content-Type: application/json;encoding=utf-8
+Authorization: Api-Key abc123
+```
+
+**Response**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json;encoding=utf-8
+
+{"status":"success"}
 ```
 
 If you enjoy this tool, please feel free to support me
