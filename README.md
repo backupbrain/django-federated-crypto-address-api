@@ -6,7 +6,7 @@ The purpose of this protocol is to retrieve a crypto wallet address from a human
 
 With this API, a crypto wallet could look up an address, for example `BTC` wallet for `backupbrain@gmail.com`. The API server will respond with a crypto wallet address, for example `1jM9o3y7KL6DK2fvEwkCJmaNVvar85B3R`
 
-As per the specification](), this API server must run on port `8325`.
+As per the [specification](https://github.com/backupbrain/federated-crypto-address-api), this API server must run on port `8325`.
 
 ## Database Structure
 
