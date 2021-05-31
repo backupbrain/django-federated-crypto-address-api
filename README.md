@@ -45,8 +45,9 @@ To use it, you must:
 To install, download this code on your server and install the dependencies
 
 ```bash
-$ git clone 
+$ git clone https://github.com/backupbrain/django-federated-crypto-address-api.git
 $ cd federated-pay
+$ python3 -m venv .venv
 $ pip3 install -r requirements.txt
 ```
 
